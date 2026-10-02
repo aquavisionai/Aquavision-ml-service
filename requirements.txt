@@ -1,0 +1,9 @@
+# Shared runtime; install PyTorch separately for your platform (see README).
+fastapi==0.142.2
+starlette==1.7.0
+uvicorn==0.54.0
+numpy==2.5.3
+pillow==12.3.0
+pydantic==2.13.5
+python-multipart==0.0.32
+anyio==4.15.1

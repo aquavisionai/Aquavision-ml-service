@@ -1,0 +1,2 @@
+# Starlette's TestClient transport; tests themselves use stdlib unittest.
+httpx2==2.13.1

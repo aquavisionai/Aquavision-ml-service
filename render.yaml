@@ -1,0 +1,23 @@
+# Template for a new Blueprint; existing services need the equivalent dashboard settings.
+services:
+  - type: web
+    name: aquavision-ml-service
+    runtime: docker
+    plan: free
+    healthCheckPath: /ready
+    envVars:
+      - key: AQUAVISION_API_KEY
+        generateValue: true
+      - key: AQUAVISION_DEVICE
+        value: cpu
+      - key: TORCH_NUM_THREADS
+        value: "1"
+      # Conservative low-memory profile; review output samples before adopting it.
+      - key: INFERENCE_TILE_SIZE
+        value: "192"
+      - key: MAX_FILE_SIZE_MB
+        value: "20"
+      - key: MAX_IMAGE_PIXELS
+        value: "2073600"
+      - key: MAX_IMAGE_DIMENSION
+        value: "4096"
